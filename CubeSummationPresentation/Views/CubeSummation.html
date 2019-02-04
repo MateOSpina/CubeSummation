@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Cube Summation</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../Scripts/CubeSummation.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1>Welcome to Cube Summation App</h1>
+        </div>
+        <div>
+            <label id="lblMessage" color="green"></label>
+        </div>
+        <div>
+            Test Cases: <input type="number" id="txtTestCase" name="txtTestCase" min="1" max="50" onkeyup="this.value = MinMaxValidation(this.value, 1, 50)">
+            <input type="button" id="btnTestCase" value="Create">
+        </div>
+        <div>
+            Matriz:             
+            Number of rows: <input type="number" id="txtMatrizNumberOfRows" name="txtMatrizNumberOfRows" min="1" max="100" onkeyup="this.value = MinMaxValidation(this.value, 1, 100)">
+            Operations: <input type="number" id="txtMatrizOperations" name="txtMatrizOperations" min="1" max="1000" onkeyup="this.value = MinMaxValidation(this.value, 1, 1000)">
+            <input type="button" id="btnMatriz" value="Create">
+        </div>
+        <div>
+            Query Type: <select id="ddlQueryType" name="ddlQueryType"></select>
+            <div id="UpdateControls">
+                Row: <input type="number" name="txtUpdateRow" id="txtUpdateRow">
+                Value: <input type="number" name="txtUpdateValue" id="txtUpdateValue">
+                <input type="button" id="btnSendUpdate" value="Send">
+            </div>
+            <div id="QueryControls">
+                Between: <input type="number" name="txtInitial" id="txtInitial">
+                And: <input type="number" name="txtEnd" id="txtEnd">
+                <input type="button" id="btnSendQuery" value="Send">
+            </div>            
+        </div>
+        <div>
+            Input: <textarea id="txtInputs" name="txtInputs" rows="10" cols="30" readonly></textarea>
+        </div>
+        <div>
+            Output: <textarea id="txtResults" name="txtResults" rows="10" cols="30" readonly></textarea>
+        </div>
+    </body>
+</html>
